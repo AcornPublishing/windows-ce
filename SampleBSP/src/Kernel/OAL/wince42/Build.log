@@ -1,0 +1,66 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [00:0000000000:PROGC ] Checking for \WINCE500\sdk\bin\i386\srccheck.exe.
+BUILD: [00:0000000001:PROGC ] SrcCheck exit code: 0 (dec).
+BUILD: [00:0000000002:PROGC ] Compile and Link for ARM.
+BUILD: [00:0000000003:PROGC ] Loading C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\Build.dat.
+BUILD: [00:0000000004:PROGC ] Done.
+BUILD: [00:0000000005:PROGC ] Computing include file dependencies:
+BUILD: [00:0000000006:PROGC ] Checking for SDK include directory: C:\WINCE500\sdk\ce\inc.
+BUILD: [00:0000000007:PROGC ] Scan \WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\
+BUILD: [00:0000000008:INFO  ] Will Compile \WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\oal.c because target: obj\ARMV4I\retail\oal.obj is missing.
+BUILD: [00:0000000009:INFO  ] Will Compile \WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s because target: obj\ARMV4I\retail\fw.obj is missing.
+BUILD: [00:0000000010:PROGC ] Saving C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\Build.dat.
+BUILD: [00:0000000011:INFO  ] Done.
+BUILD: [00:0000000012:PROGC ] Compiling \WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\ directory.
+BUILD: [00:0000000013:PROG  ] 'NMAKE.EXE   -i -c BUILDMSG=Stop.  NOLINK=1 NOPASS0=1'
+BUILD: [01:0000000014:INFO  ] makefile.def: BUILDROOT is C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42
+BUILD: [01:0000000015:INFO  ] HAJE:include sources.cmn
+BUILD: [01:0000000016:INFO  ] HAJE - 3
+BUILD: [01:0000000017:INFO  ] 3 Please add _COMMONPUBROOT and __PROJROOT to your C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\sources.cmn file.
+BUILD: [01:0000000018:INFO  ] HAJE - _COMMONPUBROOT : C:\WINCE500\PBWorkspaces\myplatform1\WINCE500\MYBSP_ARMV4I\cesysgen
+BUILD: [01:0000000019:INFO  ] HAJE - __PROJROOT : C:\WINCE500\PBWorkspaces\myplatform1\WINCE500\MYBSP_ARMV4I
+BUILD: [01:0000000020:INFO  ] HAJE - include sources.
+BUILD: [01:0000000021:INFO  ] Directory: C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42
+BUILD: [01:0000000022:INFO  ] TARGETNAME: oal
+BUILD: [01:0000000023:INFO  ] HAJE - __PROJROOT=C:\WINCE500\PBWorkspaces\myplatform1\WINCE500\MYBSP_ARMV4I
+BUILD: [01:0000000024:INFO  ] makefile.def: Including C:\WINCE500\public\common\oak\misc\sources.ReleaseType_PLATFORM
+BUILD: [01:0000000025:INFO  ] HAJE - _RELEASEDIR=C:\WINCE500\platform\MYBSP\target\ARMV4I\retail
+BUILD: [01:0000000026:PROGC ] Compiling .\oal.c
+BUILD: [01:0000000027:INFO  ] cl -nologo   /Gy -Foobj\ARMV4I\retail\oal.obj -c -IARM\ -I. -IC:\WINCE500\sdk\CE\inc -I.\Resource\0409 -Ox -Os -GF -Zi -FdC:\WINCE500\platform\MYBSP\lib\ARMV4I\retail\oal.pdb -DUNICODE -D_UNICODE -DUNDER_CE=500 -D_WIN32_WCE=500 -DWIN32 -DSTRICT -DARM -DARMV4I -D_ARM_   -DINTERNATIONAL -DL0409 -DINTLMSG_CODEPAGE=1252 -W3   -QRarch4T -DTHUMBSUPPORT -QRinterwork-return  C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\.\oal.c
+BUILD: [01:0000000028:INFO  ] oal.c
+BUILD: [01:0000000029:ERRORE] c:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\oal.c(1) : fatal error C1083: Cannot open include file: 'pehdr.h': No such file or directory
+BUILD: [01:0000000030:PROGC ] Assembling .\fw.s
+BUILD: [01:0000000031:INFO  ] 	armasm -coff  -cr  -i C:\WINCE500\sdk\CE\inc -i arm -arch 4t -pd "Thumbing SETL {FALSE}" -pd "Interworking SETL {TRUE}"  C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\.\fw.s obj\ARMV4I\retail\fw.obj
+BUILD: [01:0000000032:INFO  ] ARM Macro Assembler, Version 13.10.4077
+BUILD: [01:0000000033:INFO  ] Copyright (C) Microsoft Corporation 1984-2004
+BUILD: [01:0000000034:ERRORE] C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s(4) : error A0044: can't open file: kxarm.h
+BUILD: [01:0000000035:INFO  ] 	INCLUDE kxarm.h
+BUILD: [01:0000000036:ERRORE] C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s(11) : error A0051: unknown opcode: STARTUPTEXT
+BUILD: [01:0000000037:INFO  ]     STARTUPTEXT
+BUILD: [01:0000000038:ERRORE] C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s(12) : error A0051: unknown opcode: LEAF_ENTRY
+BUILD: [01:0000000039:INFO  ]     LEAF_ENTRY StartUp
+BUILD: [01:0000000040:ERRORE] C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s(14) : error A0064: code inside data section
+BUILD: [01:0000000041:INFO  ] 	add		r0, pc, #OEMAddressTable - (. + 8)
+BUILD: [01:0000000042:ERRORE] C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s(16) : error A0064: code inside data section
+BUILD: [01:0000000043:INFO  ] 	bl		KernelStart
+BUILD: [01:0000000044:PROGC ] Linking C:\WINCE500\platform\MYBSP\lib\ARMV4I\retail\oal.lib
+BUILD: [01:0000000045:INFO  ] 	link -lib -out:C:\WINCE500\platform\MYBSP\lib\ARMV4I\retail\oal.lib -machine:thumb @C:\DOCUME~1\LEEBS2~1\LOCALS~1\Temp\nm4F5.tmp
+BUILD: [01:0000000046:ERRORE] LINK : fatal error LNK1181: cannot open input file 'obj\ARMV4I\retail\oal.obj'
+BUILD: [01:0000000047:INFO  ] Stop.
+BUILD: [00:0000000048:PROGC ]                      Files      Warnings      Errors
+BUILD: [00:0000000049:PROGC ] Midl                     0             0           0
+BUILD: [00:0000000050:PROGC ] Resource                 0             0           0
+BUILD: [00:0000000051:PROGC ] Message                  0             0           0
+BUILD: [00:0000000052:PROGC ] Precomp Header           0             0           0
+BUILD: [00:0000000053:PROGC ] C/Cpp/Cxx                1             0           1
+BUILD: [00:0000000054:PROGC ] Assembler                1             0           5
+BUILD: [00:0000000055:PROGC ] Static Libraries         1             0           1
+BUILD: [00:0000000056:PROGC ] Dll's                    0             0           0
+BUILD: [00:0000000057:PROGC ] Exe's                    0             0           0
+BUILD: [00:0000000058:PROGC ] Resx                     0             0           0
+BUILD: [00:0000000059:PROGC ] Csharp Targets           0             0           0
+BUILD: [00:0000000060:PROGC ] Other                    0             0           1
+BUILD: [00:0000000061:PROGC ] 
+BUILD: [00:0000000062:PROGC ] Total                    3             0           8
+BUILD: [00:0000000063:PROGC ] 
+BUILD: [00:0000000064:PROGC ] 0 Warnings,  8 Errors

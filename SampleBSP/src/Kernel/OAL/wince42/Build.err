@@ -1,0 +1,8 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [01:0000000029:ERRORE] c:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\oal.c(1) : fatal error C1083: Cannot open include file: 'pehdr.h': No such file or directory
+BUILD: [01:0000000034:ERRORE] C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s(4) : error A0044: can't open file: kxarm.h
+BUILD: [01:0000000036:ERRORE] C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s(11) : error A0051: unknown opcode: STARTUPTEXT
+BUILD: [01:0000000038:ERRORE] C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s(12) : error A0051: unknown opcode: LEAF_ENTRY
+BUILD: [01:0000000040:ERRORE] C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s(14) : error A0064: code inside data section
+BUILD: [01:0000000042:ERRORE] C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\fw.s(16) : error A0064: code inside data section
+BUILD: [01:0000000046:ERRORE] LINK : fatal error LNK1181: cannot open input file 'obj\ARMV4I\retail\oal.obj'

@@ -1,0 +1,13 @@
+TARGETNAME=EBOOT
+TARGETTYPE=PROGRAM
+RELEASETYPE=PLATFORM
+EXEENTRY=StartUp
+
+TARGETLIBS=$(_COMMONOAKROOT)\lib\$(_CPUDEPPATH)\blcommon.lib \
+           $(_COMMONOAKROOT)\lib\$(_CPUDEPPATH)\fulllibc.lib
+
+SOURCES=	main.c	\
+		flash.c	\
+		start.s
+
+WINCETARGETFILES=BootImage

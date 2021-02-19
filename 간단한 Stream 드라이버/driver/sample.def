@@ -1,0 +1,10 @@
+LIBRARY 	SAMPLE
+
+EXPORTS SAM_Init
+	SAM_Deinit
+	SAM_Open
+	SAM_Close
+	SAM_Write
+	SAM_IOControl
+	SAM_PowerDown
+	SAM_PowerUp

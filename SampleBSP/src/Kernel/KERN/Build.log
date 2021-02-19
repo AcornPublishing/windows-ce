@@ -1,0 +1,66 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [00:0000000000:PROGC ] Checking for \WINCE500\sdk\bin\i386\srccheck.exe.
+BUILD: [00:0000000001:PROGC ] SrcCheck exit code: 0 (dec).
+BUILD: [00:0000000002:PROGC ] Compile and Link for ARM.
+BUILD: [00:0000000003:PROGC ] Loading C:\WINCE500\PLATFORM\SAMPLEBSP\Build.dat.
+BUILD: [00:0000000004:PROGC ] Done.
+BUILD: [00:0000000005:PROGC ] Computing include file dependencies:
+BUILD: [00:0000000006:PROGC ] Checking for SDK include directory: C:\WINCE500\sdk\ce\inc.
+BUILD: [00:0000000007:PROGC ] Scan \WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\KERN\
+BUILD: [00:0000000008:PROGC ] Saving C:\WINCE500\PLATFORM\SAMPLEBSP\Build.dat.
+BUILD: [00:0000000009:INFO  ] Done.
+BUILD: [00:0000000010:INFO  ] Relinking \WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\KERN\ because target lib: C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.exe does not exist.
+BUILD: [00:0000000011:PROGC ] Linking \WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\KERN\ directory.
+BUILD: [00:0000000012:PROG  ] 'NMAKE.EXE   -i -c BUILDMSG=Stop.  LINKONLY=1 NOPASS0=1'
+BUILD: [01:0000000013:INFO  ] makefile.def: BUILDROOT is C:\WINCE500\PLATFORM\SAMPLEBSP
+BUILD: [01:0000000014:INFO  ] HAJE:include sources.cmn
+BUILD: [01:0000000015:INFO  ] makefile.def: Including C:\WINCE500\PLATFORM\SAMPLEBSP\sources.cmn
+BUILD: [01:0000000016:INFO  ] HAJE - 3
+BUILD: [01:0000000017:INFO  ] HAJE - _COMMONPUBROOT : C:\WINCE500\PBWorkspaces\myplatform1\WINCE500\MYBSP_ARMV4I\cesysgen
+BUILD: [01:0000000018:INFO  ] HAJE - __PROJROOT : C:\WINCE500\PBWorkspaces\myplatform1\WINCE500\MYBSP_ARMV4I
+BUILD: [01:0000000019:INFO  ] HAJE - include sources.
+BUILD: [01:0000000020:INFO  ] Directory: C:\WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\KERN
+BUILD: [01:0000000021:INFO  ] TARGETNAME: kern
+BUILD: [01:0000000022:INFO  ] HAJE - __PROJROOT=C:\WINCE500\PBWorkspaces\myplatform1\WINCE500\MYBSP_ARMV4I
+BUILD: [01:0000000023:INFO  ] makefile.def: Including C:\WINCE500\public\common\oak\misc\sources.ReleaseType_PLATFORM
+BUILD: [01:0000000024:INFO  ] HAJE - _RELEASEDIR=C:\WINCE500\platform\MYBSP\target\ARMV4I\retail
+BUILD: [01:0000000025:INFO  ] 	set LIB=C:\WINCE500\sdk\CE\lib
+BUILD: [01:0000000026:PROGC ] Linking C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.exe
+BUILD: [01:0000000027:INFO  ] 	link /LARGEADDRESSAWARE -out:C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.exe -machine:thumb @C:\DOCUME~1\LEEBS2~1\LOCALS~1\Temp\nm4CC.tmp
+BUILD: [01:0000000028:INFO  ] Microsoft (R) Incremental Linker Version 7.10.4017
+BUILD: [01:0000000029:INFO  ] Copyright (C) Microsoft Corporation.  All rights reserved.
+BUILD: [01:0000000030:INFO  ] 
+BUILD: [01:0000000031:INFO  ] -nodefaultlib 
+BUILD: [01:0000000032:INFO  ] -entry:StartUp 
+BUILD: [01:0000000033:INFO  ] -pdb:C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.pdb 
+BUILD: [01:0000000034:INFO  ] /opt:ref 
+BUILD: [01:0000000035:INFO  ] -debug -debugtype:cv -incremental:no 
+BUILD: [01:0000000036:INFO  ] -map:C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.map 
+BUILD: [01:0000000037:INFO  ] -savebaserelocations:C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.rel 
+BUILD: [01:0000000038:INFO  ] -MERGE:.rdata=.text -merge:.astart=.text -subsystem:native /DEBUG /DEBUGTYPE:CV /FIXED:NO -align:4096 -ignore:4001,4070,4078,4086,4089,4096,4099,4108,4229 /STACK:65536,4096 
+BUILD: [01:0000000039:INFO  ] -subsystem:windowsce,5.00 
+BUILD: [01:0000000040:INFO  ] -base:0x00010000 
+BUILD: [01:0000000041:INFO  ] C:\WINCE500\platform\MYBSP\lib\ARMV4I\retail\oal.lib C:\WINCE500\PBWorkspaces\myplatform1\WINCE500\MYBSP_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\nk.lib C:\WINCE500\PBWorkspaces\myplatform1\WINCE500\MYBSP_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib C:\WINCE500\PBWorkspaces\myplatform1\WINCE500\MYBSP_ARMV4I\cesysgen\sdk\lib\ARMV4I\retail\corelibc.lib 
+BUILD: [01:0000000042:INFO  ] 	copylink /S:a /D:f /E:a /R:n C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.exe C:\WINCE500\PBWorkspaces\myplatform1\RelDir\MYBSP_ARMV4I_Release\kern.exe
+BUILD: [01:0000000043:INFO  ] 	copylink /S:a /D:f /E:a /R:n C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.map C:\WINCE500\PBWorkspaces\myplatform1\RelDir\MYBSP_ARMV4I_Release\kern.map
+BUILD: [01:0000000044:INFO  ] 	copylink /S:a /D:f /E:a /R:n C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.pdb C:\WINCE500\PBWorkspaces\myplatform1\RelDir\MYBSP_ARMV4I_Release
+BUILD: [01:0000000045:INFO  ] 	if exist C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.rel copylink /S:a /D:f /E:a /R:n C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\kern.rel C:\WINCE500\PBWorkspaces\myplatform1\RelDir\MYBSP_ARMV4I_Release\kern.rel
+BUILD: [01:0000000046:INFO  ] Stop.
+BUILD: [00:0000000047:PROGC ] Done.
+BUILD: [00:0000000048:PROGC ]                      Files      Warnings      Errors
+BUILD: [00:0000000049:PROGC ] Midl                     0             0           0
+BUILD: [00:0000000050:PROGC ] Resource                 0             0           0
+BUILD: [00:0000000051:PROGC ] Message                  0             0           0
+BUILD: [00:0000000052:PROGC ] Precomp Header           0             0           0
+BUILD: [00:0000000053:PROGC ] C/Cpp/Cxx                0             0           0
+BUILD: [00:0000000054:PROGC ] Assembler                0             0           0
+BUILD: [00:0000000055:PROGC ] Static Libraries         0             0           0
+BUILD: [00:0000000056:PROGC ] Dll's                    0             0           0
+BUILD: [00:0000000057:PROGC ] Exe's                    1             0           0
+BUILD: [00:0000000058:PROGC ] Resx                     0             0           0
+BUILD: [00:0000000059:PROGC ] Csharp Targets           0             0           0
+BUILD: [00:0000000060:PROGC ] Other                    0             0           0
+BUILD: [00:0000000061:PROGC ] 
+BUILD: [00:0000000062:PROGC ] Total                    1             0           0
+BUILD: [00:0000000063:PROGC ] 
+BUILD: [00:0000000064:PROGC ] 0 Warnings,  0 Errors

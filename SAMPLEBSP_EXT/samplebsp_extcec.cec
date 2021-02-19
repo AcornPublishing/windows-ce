@@ -1,0 +1,68 @@
+CECInfo
+(
+	Name ( "SIMPLEBSP" )
+	CECVersion ( 5.00 )
+	Description ( "HAJESOFT Simple BSP" )
+	GUID ( {B0B4690F-336B-4BC7-9594-6914DDCC80B2} )
+	Vendor ( "HAJESOFT" )
+)
+ComponentType
+(
+	Name ( "BSPs" )
+	GUID ( {3CABD6DA-B577-4A87-9490-9432E80DC2F1} )
+	Description ( "Board Support Packages" )
+	MaxResolvedImpsAllowed( 999 )
+	Implementations
+	(
+		Implementation
+		(
+			Name ( "Simple BSP: ARMV4I" )
+			GUID ( {79FD9EF3-740E-4618-9078-2F452366750B} )
+			Description ( "HAJESOFT Simple BSP" )
+			BSPPlatformDir ( "SIMPLEBSP" )
+			Version ( "1.0.0.0" )
+			Vendor ( "HAJESOFT" )
+			SizeIsCPUDependent( 1 )
+			CPUSizeMultiplier( 1.0 )
+			BuildMethods
+			(
+				BuildMethod
+				(
+					GUID ( {83F360D4-FA0A-46DE-BD89-9B6453F7B6AE} )
+					Step ( BSP )
+					CPU ( "ARMV4I" )
+				)
+			)
+		)
+	)
+)
+ComponentType
+(
+	Name ( "{56C61468-8D4F-4172-9909-B61CEB99C399}" )
+	GUID ( {2B4EB92A-DF3F-4497-9300-D44913367522} )
+	Vendor ( "HAJESOFT" )
+	MaxResolvedImpsAllowed( 1 )
+	Implementations
+	(
+		Implementation
+		(
+			Name ( "{56C61468-8D4F-4172-9909-B61CEB99C399}" )
+			GUID ( {56C61468-8D4F-4172-9909-B61CEB99C399} )
+			Description ( "Simple Bootloader" )
+			Version ( "1.0.0.0" )
+			Vendor ( "HAJESOFT" )
+			Variable( "module_name",  )
+			SizeIsCPUDependent( 1 )
+			BuildMethods
+			(
+				BuildMethod
+				(
+					GUID ( {0302AED8-7C25-4BF4-8F0F-A1BDEACDE4EB} )
+					Step ( BSP )
+					CPU ( "ARMV4I" )
+					Action ( '#SRCCODE(SOURCES,"$(_WINCEROOT)\PLATFORM\SIMPLEBSP\Src\Bootloader\EBOOT", "{56C61468-8D4F-4172-9909-B61CEB99C399}")' )
+				)
+			)
+		)
+	)
+)

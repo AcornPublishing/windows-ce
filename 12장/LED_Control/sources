@@ -1,0 +1,43 @@
+WINCEREL=1
+RELEASETYPE=LOCAL
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;
+TARGETNAME=LED_Control
+FILE_VIEW_ROOT_FOLDER= \
+  ReadMe.txt \
+  StdAfx.cpp \
+  prelink.bat \
+  postlink.bat \
+
+FILE_VIEW_RESOURCE_FOLDER= \
+  LED_Control.ico \
+
+FILE_VIEW_INCLUDES_FOLDER= \
+  StdAfx.h \
+  resource.h \
+  LED_Control.h \
+
+SOURCES= \
+  LED_Control.cpp \
+  LED_Control.rc \
+
+TARGETTYPE=PROGRAM
+PRECOMPILED_CXX=1
+PRECOMPILED_PCH=StdAfx.pch
+TARGETLIBS= \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\coredll.lib \
+
+PRECOMPILED_OBJ=StdAfx.obj
+PRECOMPILED_INCLUDE=StdAfx.h
+POSTLINK_PASS_CMD=postlink.bat
+PRELINK_PASS_CMD=prelink.bat
+FILE_VIEW_PARAMETER_FOLDER= \
+  LED_Control.bib \
+  LED_Control.reg \
+  LED_Control.dat \
+  LED_Control.db \
+  ProjSysgen.bat \
+
+INCLUDES= \
+  $(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\oak\CSP\ARM\SAMSUNG\S3C2410X\Inc \
+

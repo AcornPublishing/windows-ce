@@ -1,0 +1,2 @@
+BootImage:
+     romimage  boot.bib

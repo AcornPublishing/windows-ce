@@ -1,0 +1,361 @@
+;
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;
+; Use of this source code is subject to the terms of the Microsoft end-user
+; license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+; If you did not accept the terms of the EULA, you are not authorized to use
+; this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+; install media.
+;
+
+; Our variables
+#define BUILTIN_ROOT HKEY_LOCAL_MACHINE\Drivers\BuiltIn
+#define DRIVERS_DIR $(_PUBLICROOT)\common\oak\drivers
+
+
+; @CESYSGEN IF WCESHELLFE_MODULES_CTLPNL
+; This registry setting controls the checkboxes displayed in the Sounds CPL
+; under "enable clicks & taps". Set bit0 if you have a keyboard, set bit1 if
+; you have a touch screen. Set bit2 if you have HW buttons (NOTE: for now
+; HW buttons are mutually exclusive with the keyboard)
+[HKEY_LOCAL_MACHINE\ControlPanel]
+    "InputConfig"=dword:3   ; 3 => keybd and touch screen
+; @CESYSGEN ENDIF WCESHELLFE_MODULES_CTLPNL
+
+; @CESYSGEN IF WCESHELLFE_MODULES_EXPLORER
+; This registry setting controls display of the Explorer's suspend menu button
+[HKEY_LOCAL_MACHINE\Explorer]
+    "Suspend"=dword:1
+    
+; Disable Suspend
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+	"BattPowerOff"=dword:0
+	"ExtPowerOff"=dword:0
+	"WakeupPowerOff"=dword:0
+	"ScreenPowerOff"=dword:0
+; @CESYSGEN ENDIF WCESHELLFE_MODULES_EXPLORER
+
+
+; @CESYSGEN IF CE_MODULES_DEVICE
+
+; HIVE BOOT SECTION
+[HKEY_LOCAL_MACHINE\Drivers\Resources\IRQ]
+   "Identifier"=dword:1
+   "Minimum"=dword:1
+   "Space"=dword:20
+   "Ranges"="1-0x20"
+;  "Shared"=""
+
+[HKEY_LOCAL_MACHINE\Drivers\Resources\IO]
+   "Identifier"=dword:2
+   "Minimum"=dword:0
+   "Space"=dword:10000
+   "Ranges"="0-0xFFFF"
+; END HIVE BOOT SECTION
+
+
+; @CESYSGEN IF CE_MODULES_BATTDRVR
+#include "$(DRIVERS_DIR)\battdrvr\battdrvr.reg"
+; @CESYSGEN ENDIF CE_MODULES_BATTDRVR
+
+; @CESYSGEN IF CE_MODULES_NLEDDRVR
+#include "$(DRIVERS_DIR)\nleddrvr\nleddrvr.reg"
+; @CESYSGEN ENDIF CE_MODULES_NLEDDRVR
+
+; @CESYSGEN IF CE_MODULES_POINTER   
+[HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\TOUCH]
+  "MaxCalError"=dword:7
+; portrait 
+;  "CalibrationData"="500,512 762,268 758,760 244,758 241,266 "
+; Landscape 
+;   "CalibrationData"="515,503 763,748 258,749 269,255 764,255 "
+; @CESYSGEN ENDIF CE_MODULES_POINTER   
+
+; @CESYSGEN IF CE_MODULES_SERIAL
+;=============== UART0 (physical COM1 connector P1) (Serial) ===============
+IF BSP_NOSERIAL !
+#include "$(_TARGETPLATROOT)\src\drivers\serial\ser_smdk2410.reg"
+ENDIF BSP_NOSERIAL !
+;=========== End of UART(Serial) ===============
+; @CESYSGEN ENDIF CE_MODULES_SERIAL
+
+; @CESYSGEN IF CE_MODULES_KEYBD
+; Keybd driver is the same.
+IF BSP_NOKEYBD !
+#include "$(DRIVERS_DIR)\keybd\keybd.reg"
+
+[HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\KEYBD]
+    "DriverName"="kbdmouse.dll"
+    "Irq"=dword:1
+    "IOBase"=dword:B1600000
+    "SSPBase"=dword:B1900000
+
+#include "$(DRIVERS_DIR)\keybd\LayMgr.reg"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\$(input_locale)]
+	"Matrix"="kbdmouse.dll"
+
+
+; @CESYSGEN IF CE_MODULES_KBDA1
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000401]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDA1
+
+; @CESYSGEN IF CE_MODULES_KBDHEB
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\0000040D]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDHEB
+
+; @CESYSGEN IF CE_MODULES_KBDTH0
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\0000041E]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDTH0
+
+; @CESYSGEN IF CE_MODULES_KBDINHIN
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00010439]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINHIN
+
+; @CESYSGEN IF CE_MODULES_KBDINMAR
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\0000044E]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINMAR
+
+; @CESYSGEN IF CE_MODULES_KBDINPUN
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000446]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINPUN
+
+; @CESYSGEN IF CE_MODULES_KBDINTEL
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\0000044A]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINTEL
+
+; @CESYSGEN IF CE_MODULES_KBDINGUJ
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000447]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINGUJ
+
+; @CESYSGEN IF CE_MODULES_KBDINKAN
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\0000044B]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINKAN
+
+; @CESYSGEN IF CE_MODULES_KBDINTAM
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000449]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDINTAM
+
+; @CESYSGEN IF CE_MODULES_KBDDV
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00010409]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDDV
+
+; @CESYSGEN IF CE_MODULES_KBDUS
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000409]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDUS
+
+; @CESYSGEN IF CE_MODULES_KBDJPN
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000411]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDJPN
+
+; @CESYSGEN IF CE_MODULES_KBDKOR
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000412]
+	"Matrix"="kbdmouse.dll"
+; @CESYSGEN ENDIF CE_MODULES_KBDKOR
+
+
+ENDIF BSP_NOKEYBD !
+; @CESYSGEN ENDIF CE_MODULES_KEYBD
+
+
+; @CESYSGEN IF CE_MODULES_PCCARD
+IF BSP_NOPCCARD !
+#include "$(_TARGETPLATROOT)\src\drivers\pccard\pcc_smdk2410.reg"
+#include "$(DRIVERS_DIR)\pccard\mdd\pcc_serv.reg"
+[HKEY_LOCAL_MACHINE\Drivers\PCCARD\PCMCIA\TEMPLATE\PCMCIA]
+   "Dll"="pcmcia.dll"
+   "NoConfig"=dword:1
+   "NoISR"=dword:1 ; Do not load any ISR.
+   "IClass"=multi_sz:"{6BEAB08A-8914-42fd-B33F-61968B9AAB32}=PCMCIA Card Services"
+ENDIF BSP_NOPCCARD !
+; @CESYSGEN ENDIF CE_MODULES_PCCARD
+
+; @CESYSGEN IF CE_MODULES_SDBUS
+IF BSP_SDHC_SC2410
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\SDHC_SMDK2410]
+    "Order"=dword:21
+    "Dll"="sdhc_sc2410.dll"
+    "Prefix"="SDH"
+    
+    "DMAChannel"=dword:0            ; DMA channel to use.  Set to 0xffffffff to disable DMA
+    "DMAIrq"=dword:11
+    "DMA_IST_Priority"=dword:96
+
+    "SDIOIrq"=dword:15
+    "SDIO_IST_Priority"=dword:97
+    
+    "PollingTimeout"=dword:100      ; 100 ms
+    "CardDetect_Thread_Priority"=dword:98
+    
+    "CardDetectGPIO"="G"            ; card detect on GPG10
+    "CardDetectMask"=dword:400
+    "CardDetectFlag"=dword:0
+    "CardDetectControlMask"=dword:fffcffff
+    "CardDetectControlFlag"=dword:0
+    "CardDetectPullupMask"=dword:ffffffef
+    "CardDetectPullupFlag"=dword:10
+    
+    "CardReadWriteGPIO"="H"         ; card R/W on GPH8
+    "CardReadWriteMask"=dword:100
+    "CardReadWriteFlag"=dword:100
+    "CardReadWriteControlMask"=dword:ffcfffff
+    "CardReadWriteControlFlag"=dword:0
+    "CardReadWritePullupMask"=dword:ffffffbf
+    "CardReadWritePullupFlag"=dword:40
+
+    "HandleBusyFinishOnCommand38"=dword:1
+    "DmaTransferTimeoutFactor"=dword:8
+    "DmaTransferTimeoutConstant"=dword:3000
+
+ENDIF BSP_SDHC_SC2410
+; @CESYSGEN ENDIF CE_MODULES_SDBUS
+
+
+IF BSP_NOPWRBTN !
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\PBUT2410]
+    "Dll"="pwrbtn2410.dll"
+    "Prefix"="DSK"
+    "Index"=dword:2
+    "Order"=dword:2
+    "Ioctl"=dword:4
+    "FSD"= "fatfs.dll"
+ENDIF BSP_NOPWRBTN !
+
+
+IF BSP_NOAUDIO !
+; @CESYSGEN IF CE_MODULES_WAVEAPI
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Audio]
+   "Prefix"="WAV"
+   "Dll"="s3c2410x_wavedev.dll"
+   "Index"=dword:1
+   "Order"=dword:0
+   ; publish mixer interface
+   "IClass"=multi_sz:"{37168569-61C4-45fd-BD54-9442C7DBA46F}"
+   
+; @CESYSGEN ENDIF CE_MODULES_WAVEAPI
+ENDIF BSP_NOAUDIO !
+
+
+;================= USB =================
+; @CESYSGEN IF CE_MODULES_USBD
+IF BSP_NOUSB !
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\OHCI]
+   "InterfaceType"=dword:0     ; Internal
+   "Prefix"="HCD"
+   "Dll"="ohci2.dll"
+   "Index"=dword:1
+   "Order"=dword:1
+   "Irq"=dword:1a		; 26
+   "SysIntr"=dword:11		; (SYSINTR_FIRMWARE+1)
+   "MemBase"=dword:49000000
+   "MemLen"=dword:1000
+   "UseExistingSettings"=dword:0
+ENDIF
+
+;============= End of USB =================
+; @CESYSGEN ENDIF CE_MODULES_USBD
+
+; @CESYSGEN IF CE_MODULES_USBFN
+IF BSP_NOUSBFN !
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\SC2410USBFN]
+   "Dll"="sc2410usbfn.dll"
+   "Prefix"="UFN"
+   "Priority256"=dword:64
+   "IoBase"=dword:B1200000
+   "IoLen"=dword:1000        ; Use one page
+   "Irq"=dword:19
+   "BusIoctl"=dword:2a0048
+   "IClass"=multi_sz:"{E2BDC372-598F-4619-BC50-54B3F7848D35}=%b","{6F40791D-300E-44E4-BC38-E0E63CA8375C}=%b"
+ENDIF BSP_NOUSBFN !
+; @CESYSGEN ENDIF CE_MODULES_USBFN
+
+
+; @CESYSGEN ENDIF CE_MODULES_DEVICE
+
+
+; HIVE BOOT SECTION
+; @CESYSGEN IF CE_MODULES_SDNPCID
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\MSFlash]
+        "Profile"="MSFlash"
+        "IClass"=multi_sz:"{A4E7EDDA-E575-4252-9D6B-4195D48BB865}"
+        "Order"=dword:0
+        "FriendlyName"="MSFLASH Driver"
+        "Dll"="smflash.dll"
+        "Prefix"="DSK"
+
+[HKEY_LOCAL_MACHINE\System\StorageManager\AutoLoad\MSFlash]
+    "DriverPath"="Drivers\\BuiltIn\\MSFlash"
+    ; LoadFlags 0x01 == load synchronously
+    "LoadFlags"=dword:1
+    "Order"=dword:0
+    "BootPhase"=dword:0
+
+; @CESYSGEN ENDIF CE_MODULES_SDNPCID
+; END HIVE BOOT SECTION
+
+; @CESYSGEN IF CE_MODULES_DISPLAY
+IF BSP_NODISPLAY !
+[HKEY_LOCAL_MACHINE\Drivers\Display\S3C2410\CONFIG]
+	"DisplayDll"="s3c2410x_lcd.dll"
+	"LCDVirtualFrameBase"=dword:ac100000
+	"LCDPhysicalFrameBase"=dword:30100000
+
+[HKEY_LOCAL_MACHINE\System\GDI\Drivers]
+    "Display"="s3c2410x_lcd.dll"
+
+; S2410 IrDA(UART2)
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\IRDA2410]
+   "DeviceArrayIndex"=dword:1
+   "Irq"=dword:09
+   "IoBase"=dword:50008000
+   "IoLen"=dword:2C
+   "Prefix"="COM"
+   "IClass"="{CC5195AC-BA49-48a0-BE17-DF6D1B0173DD}"
+   "Dll"="IRDA2410.Dll"
+   "Order"=dword:0
+   "Priority"=dword:0
+   "Port"="COM3:"
+   "DeviceType"=dword:0  ; IRDA modem, 0 -> null modem
+   "FriendlyName"="S2410 IRDA2410"
+;   "Index"=dword:2
+
+; GWES will pass this value to the LCD driver; the driver will open the
+; key to which it points to read its configuration.
+[HKEY_LOCAL_MACHINE\System\GDI\DisplayCandidates]
+	"Candidate10"="Drivers\\Display\\S3C2410\\CONFIG"
+ENDIF BSP_NODISPLAY !
+; @CESYSGEN ENDIF CE_MODULES_DISPLAY
+
+; ----------------------------------------------------------------------------
+; Select a Direct3D Mobile Driver
+
+; @CESYSGEN IF DIRECTX_MODULES_D3DM
+IF BSP_D3DM_NULL
+IF BSP_D3DM_NULL_REMOTE
+[HKEY_LOCAL_MACHINE\System\D3DM\Drivers]
+   "RemoteHook"="d3dm_nulldrv.dll"
+ELSE
+[HKEY_LOCAL_MACHINE\System\D3DM\Drivers]
+   "LocalHook"="d3dm_nulldrv.dll"
+ENDIF BSP_D3DM_NULL_REMOTE
+ENDIF BSP_D3DM_NULL
+; @CESYSGEN ENDIF DIRECTX_MODULES_D3DM
+
+[HKEY_LOCAL_MACHINE\init]
+"Launch50"="dummyshell.exe"
+"Depend50"=hex:14,00, 1e,00

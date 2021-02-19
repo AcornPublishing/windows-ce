@@ -1,0 +1,25 @@
+MEMORY
+;   Name     Start     Size      Type
+;   -------  --------  --------  ----
+    
+    ; Reserve some RAM before Eboot.
+    ; This memory will be used later.
+    
+    FILLER   A0000000  00030000  RESERVED   ; Replaced with data later.
+
+    EBOOT    A0030000  00020000  RAMIMAGE   ; Set aside 128 KB for loader; finalize later.
+    RAM      A0050000  00010000  RAM        ; Free RAM; finalize later.
+    
+CONFIG
+    COMPRESSION=OFF
+    PROFILE=OFF
+    KERNELFIXUPS=ON
+    ROMSTART=A0030000
+    ROMWIDTH=32
+    ROMSIZE=20000
+
+MODULES
+;   Name            Path                                                              Memory Type
+;   --------------  ----------------------------------------------                    -----------
+    nk.exe          $(_TARGETPLATROOT)\target\$(_TGTCPU)\$(WINCEDEBUG)\eboot.exe      EBOOT
+

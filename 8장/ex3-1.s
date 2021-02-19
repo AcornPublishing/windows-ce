@@ -1,0 +1,11 @@
+	OPT 2
+  
+	STARTUPTEXT
+	LEAF_ENTRY StartUp
+    
+	MOV	R0, R1
+	MOV	R1, R2
+	MOV	R2, R0
+
+	END
+

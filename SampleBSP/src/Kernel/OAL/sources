@@ -1,0 +1,13 @@
+TARGETNAME=oal
+RELEASETYPE=PLATFORM
+WINCECPU=1
+TARGETTYPE=LIBRARY
+
+INCLUDES= ..\..\inc;
+
+SOURCES= \
+    oal.c 
+
+ARM_SOURCES= \
+    fw.s   \
+

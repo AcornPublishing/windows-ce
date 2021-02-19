@@ -1,0 +1,32 @@
+LIBRARY 	MYFSD
+
+EXPORTS
+    FSD_MountDisk=MYFSD_MountDisk
+    FSD_UnmountDisk=MYFSD_UnmountDisk
+    FSD_CreateDirectoryW=MYFSD_CreateDirectoryW
+    FSD_RemoveDirectoryW=MYFSD_RemoveDirectoryW
+    FSD_GetFileAttributesW=MYFSD_GetFileAttributesW
+    FSD_SetFileAttributesW=MYFSD_SetFileAttributesW
+    FSD_DeleteFileW=MYFSD_DeleteFileW
+    FSD_MoveFileW=MYFSD_MoveFileW
+    FSD_DeleteAndRenameFileW=MYFSD_DeleteAndRenameFileW
+    FSD_GetDiskFreeSpaceW=MYFSD_GetDiskFreeSpaceW
+    FSD_Notify=MYFSD_Notify
+    FSD_RegisterFileSystemFunction=MYFSD_RegisterFileSystemFunction
+    FSD_FindFirstFileW=MYFSD_FindFirstFileW
+    FSD_FindNextFileW=MYFSD_FindNextFileW
+    FSD_FindClose=MYFSD_FindClose
+    FSD_CreateFileW=MYFSD_CreateFileW
+    FSD_ReadFile=MYFSD_ReadFile
+    FSD_ReadFileWithSeek=MYFSD_ReadFileWithSeek
+    FSD_WriteFile=MYFSD_WriteFile
+    FSD_WriteFileWithSeek=MYFSD_WriteFileWithSeek
+    FSD_SetFilePointer=MYFSD_SetFilePointer
+    FSD_GetFileSize=MYFSD_GetFileSize
+    FSD_GetFileInformationByHandle=MYFSD_GetFileInformationByHandle
+    FSD_FlushFileBuffers=MYFSD_FlushFileBuffers
+    FSD_GetFileTime=MYFSD_GetFileTime
+    FSD_SetFileTime=MYFSD_SetFileTime
+    FSD_SetEndOfFile=MYFSD_SetEndOfFile
+    FSD_DeviceIoControl=MYFSD_DeviceIoControl
+    FSD_CloseFile=MYFSD_CloseFile

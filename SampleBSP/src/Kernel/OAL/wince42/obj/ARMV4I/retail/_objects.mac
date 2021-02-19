@@ -1,0 +1,6 @@
+OBJECTS= \
+    obj\ARMV4I\retail\oal.obj \
+    obj\ARMV4I\retail\fw.obj
+
+PASS0_OBJECTS=
+

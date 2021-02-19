@@ -1,0 +1,41 @@
+WINCEREL=1
+RELEASETYPE=LOCAL
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;
+TARGETNAME=CETKTEST
+FILE_VIEW_ROOT_FOLDER= \
+  ReadMe.txt \
+  prelink.bat \
+  postlink.bat \
+
+FILE_VIEW_RESOURCE_FOLDER= \
+
+FILE_VIEW_INCLUDES_FOLDER= \
+  ft.h \
+  globals.h \
+  main.h \
+
+SOURCES= \
+  CETKTESTTest.cpp \
+  globals.cpp \
+  test.cpp \
+
+TARGETTYPE=DYNLINK
+TARGETLIBS= \
+  $(_WINCEROOT)\Others\Wcetk\Tux\lib\$(_TGTCPU)\RETAIL\kato.lib \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\coredll.lib \
+
+INCLUDES= \
+  $(_WINCEROOT)\OTHERS\WCETK\TUX\INC;$(INCLUDES) \
+
+CDEFINES=$(CDEFINES) -DCETKTEST_EXPORTS
+POSTLINK_PASS_CMD=postlink.bat
+PRELINK_PASS_CMD=prelink.bat
+FILE_VIEW_PARAMETER_FOLDER= \
+  CETKTEST.bib \
+  CETKTEST.reg \
+  CETKTEST.dat \
+  CETKTEST.db \
+  CETKTEST.def \
+  ProjSysgen.bat \
+

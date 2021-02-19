@@ -1,0 +1,81 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [00:0000000000:PROGC ] Checking for \WINCE500\sdk\bin\i386\srccheck.exe.
+BUILD: [00:0000000001:PROGC ] SrcCheck exit code: 0 (dec).
+BUILD: [00:0000000002:PROGC ] Compile and Link for ARM.
+BUILD: [00:0000000003:PROGC ] Computing include file dependencies:
+BUILD: [00:0000000004:PROGC ] Checking for SDK include directory: C:\WINCE500\sdk\ce\inc.
+BUILD: [00:0000000005:PROGC ] Scan \WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\
+BUILD: [00:0000000006:INFO  ] Will Compile \WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\StdAfx.h because target: \WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\obj\ARMV4I\retail\StdAfx.pch is missing.
+BUILD: [00:0000000007:INFO  ] Will Compile \WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\DummyShell.rc because target: obj\ARMV4I\retail\DummyShell.res is missing.
+BUILD: [00:0000000008:INFO  ] Will Compile \WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\DummyShell.cpp because target: obj\ARMV4I\retail\DummyShell.obj is missing.
+BUILD: [00:0000000009:PROGC ] Saving C:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\Build.dat.
+BUILD: [00:0000000010:INFO  ] Done.
+BUILD: [00:0000000011:PROGC ] Compiling \WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\ directory.
+BUILD: [00:0000000012:PROG  ] 'NMAKE.EXE   -i -c BUILDMSG=Stop.  NOLINK=1 NOPASS0=1'
+BUILD: [01:0000000013:INFO  ] makefile.def: BUILDROOT is C:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell
+BUILD: [01:0000000014:INFO  ] 3 Please add _COMMONPUBROOT and __PROJROOT to your C:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\sources.cmn file.
+BUILD: [01:0000000015:INFO  ] Directory: C:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell
+BUILD: [01:0000000016:INFO  ] TARGETNAME: DummyShell
+BUILD: [01:0000000017:INFO  ] makefile.def: Including C:\WINCE500\public\common\oak\misc\sources.ReleaseType_LOCAL
+BUILD: [01:0000000018:PROGC ] Create precompiled header StdAfx.h obj\ARMV4I\retail\StdAfx.obj C:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\obj\ARMV4I\retail\StdAfx.pch
+BUILD: [01:0000000019:INFO  ] cl -nologo  /Tp  /Gy -c -IARM\ -I. -IC:\WINCE500\public\common\sdk\inc -IC:\WINCE500\sdk\CE\inc -I.\Resource\0409 -Ox -Os -GF -Zi -Fdobj\ARMV4I\retail\DummyShell.pdb -DUNICODE -D_UNICODE -DUNDER_CE=500 -D_WIN32_WCE=500 -DWIN32 -DSTRICT -DARM -DARMV4I -D_ARM_   -DINTERNATIONAL -DL0409 -DINTLMSG_CODEPAGE=1252 -c -IARM\ -I. -IC:\WINCE500\public\common\sdk\inc -IC:\WINCE500\sdk\CE\inc -I.\Resource\0409 -Ox -Os -GF -Zi -Fdobj\ARMV4I\retail\DummyShell.pdb -DUNICODE -D_UNICODE -DUNDER_CE=500 -D_WIN32_WCE=500 -DWIN32 -DSTRICT -DARM -DARMV4I -D_ARM_   -DINTERNATIONAL -DL0409 -DINTLMSG_CODEPAGE=1252 -W3   -QRarch4T -DTHUMBSUPPORT -QRinterwork-return  /YlDummyShell /YcStdAfx.h /FpC:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\obj\ARMV4I\retail\StdAfx.pch /FoC:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\obj\ARMV4I\retail\StdAfx.obj
+BUILD: [01:0000000020:INFO  ] nm2413.tmp
+BUILD: [01:0000000021:PROGC ] Resource Compiling .\DummyShell.rc
+BUILD: [01:0000000022:INFO  ] 	rc -r -IARM\ -I. -IC:\WINCE500\public\common\sdk\inc -IC:\WINCE500\sdk\CE\inc -I.\Resource\0409  -DUNDER_CE=500  -DINTERNATIONAL -DL0409 -l 409 -c 1252  -foobj\ARMV4I\retail\DummyShell.res C:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\.\DummyShell.rc
+BUILD: [01:0000000023:PROGC ] Compiling .\DummyShell.cpp
+BUILD: [01:0000000024:INFO  ] cl -nologo  /YuStdAfx.h /FpC:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\obj\ARMV4I\retail\StdAfx.pch  /Gy -Foobj\ARMV4I\retail\DummyShell.obj -c -IARM\ -I. -IC:\WINCE500\public\common\sdk\inc -IC:\WINCE500\sdk\CE\inc -I.\Resource\0409 -Ox -Os -GF -Zi -Fdobj\ARMV4I\retail\DummyShell.pdb -DUNICODE -D_UNICODE -DUNDER_CE=500 -D_WIN32_WCE=500 -DWIN32 -DSTRICT -DARM -DARMV4I -D_ARM_   -DINTERNATIONAL -DL0409 -DINTLMSG_CODEPAGE=1252 -W3   -QRarch4T -DTHUMBSUPPORT -QRinterwork-return  C:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\.\DummyShell.cpp
+BUILD: [01:0000000025:INFO  ] DummyShell.cpp
+BUILD: [01:0000000026:WARNN ] c:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\DummyShell.cpp(129) : warning C4101: 'ps' : unreferenced local variable
+BUILD: [01:0000000027:WARNN ] c:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\DummyShell.cpp(130) : warning C4101: 'hdc' : unreferenced local variable
+BUILD: [01:0000000028:INFO  ] Stop.
+BUILD: [00:0000000029:PROG  ] ' prelink.bat'
+BUILD: [00:0000000030:INFO  ] Relinking \WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\ because target lib: obj\ARMV4I\retail\DummyShell.exe does not exist.
+BUILD: [00:0000000031:PROGC ] Linking \WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\ directory.
+BUILD: [00:0000000032:PROG  ] 'NMAKE.EXE   -i -c BUILDMSG=Stop.  LINKONLY=1 NOPASS0=1'
+BUILD: [01:0000000033:INFO  ] makefile.def: BUILDROOT is C:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell
+BUILD: [01:0000000034:INFO  ] 3 Please add _COMMONPUBROOT and __PROJROOT to your C:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell\sources.cmn file.
+BUILD: [01:0000000035:INFO  ] Directory: C:\WINCE500\PBWorkspaces\2410TK_TEST\DummyShell
+BUILD: [01:0000000036:INFO  ] TARGETNAME: DummyShell
+BUILD: [01:0000000037:INFO  ] makefile.def: Including C:\WINCE500\public\common\oak\misc\sources.ReleaseType_LOCAL
+BUILD: [01:0000000038:INFO  ] 	set LIB=C:\WINCE500\sdk\CE\lib
+BUILD: [01:0000000039:PROGC ] Linking obj\ARMV4I\retail\DummyShell.exe
+BUILD: [01:0000000040:INFO  ] 	link /LARGEADDRESSAWARE -out:obj\ARMV4I\retail\DummyShell.exe -machine:thumb @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\nm2417.tmp
+BUILD: [01:0000000041:INFO  ] Microsoft (R) Incremental Linker Version 7.10.4017
+BUILD: [01:0000000042:INFO  ] Copyright (C) Microsoft Corporation.  All rights reserved.
+BUILD: [01:0000000043:INFO  ] 
+BUILD: [01:0000000044:INFO  ] -nodefaultlib 
+BUILD: [01:0000000045:INFO  ] -entry:WinMainCRTStartup 
+BUILD: [01:0000000046:INFO  ] -pdb:obj\ARMV4I\retail\DummyShell.pdb 
+BUILD: [01:0000000047:INFO  ] /opt:ref 
+BUILD: [01:0000000048:INFO  ] -debug -debugtype:cv -incremental:no 
+BUILD: [01:0000000049:INFO  ] -map:obj\ARMV4I\retail\DummyShell.map 
+BUILD: [01:0000000050:INFO  ] -savebaserelocations:obj\ARMV4I\retail\DummyShell.rel 
+BUILD: [01:0000000051:INFO  ] -MERGE:.rdata=.text -merge:.astart=.text -align:4096 -ignore:4001,4070,4078,4086,4089,4096,4099,4108,4229 /STACK:65536,4096 
+BUILD: [01:0000000052:INFO  ] -subsystem:windowsce,5.00 
+BUILD: [01:0000000053:INFO  ] -base:0x00010000 
+BUILD: [01:0000000054:INFO  ] obj\ARMV4I\retail\DummyShell.res obj\ARMV4I\retail\DummyShell.obj obj\ARMV4I\retail\StdAfx.obj 
+BUILD: [01:0000000055:INFO  ] C:\WINCE500\PBWorkspaces\2410TK_TEST\WINCE500\smdk2410_ARMV4I\cesysgen\sdk\lib\ARMV4I\retail\coredll.lib C:\WINCE500\PBWorkspaces\2410TK_TEST\WINCE500\smdk2410_ARMV4I\cesysgen\sdk\lib\ARMV4I\retail\corelibc.lib 
+BUILD: [01:0000000056:INFO  ] 	copylink /S:a /D:f /E:a /R:n obj\ARMV4I\retail\DummyShell.exe C:\WINCE500\PBWorkspaces\2410TK_TEST\RelDir\smdk2410_ARMV4I_Release\DummyShell.exe
+BUILD: [01:0000000057:INFO  ] 	copylink /S:a /D:f /E:a /R:n obj\ARMV4I\retail\DummyShell.map C:\WINCE500\PBWorkspaces\2410TK_TEST\RelDir\smdk2410_ARMV4I_Release\DummyShell.map
+BUILD: [01:0000000058:INFO  ] 	copylink /S:a /D:f /E:a /R:n obj\ARMV4I\retail\DummyShell.pdb C:\WINCE500\PBWorkspaces\2410TK_TEST\RelDir\smdk2410_ARMV4I_Release
+BUILD: [01:0000000059:INFO  ] 	if exist obj\ARMV4I\retail\DummyShell.rel copylink /S:a /D:f /E:a /R:n obj\ARMV4I\retail\DummyShell.rel C:\WINCE500\PBWorkspaces\2410TK_TEST\RelDir\smdk2410_ARMV4I_Release\DummyShell.rel
+BUILD: [01:0000000060:INFO  ] Stop.
+BUILD: [00:0000000061:PROG  ] ' postlink.bat'
+BUILD: [00:0000000062:PROGC ] Done.
+BUILD: [00:0000000063:PROGC ]                      Files      Warnings      Errors
+BUILD: [00:0000000064:PROGC ] Midl                     0             0           0
+BUILD: [00:0000000065:PROGC ] Resource                 1             0           0
+BUILD: [00:0000000066:PROGC ] Message                  0             0           0
+BUILD: [00:0000000067:PROGC ] Precomp Header           1             0           0
+BUILD: [00:0000000068:PROGC ] C/Cpp/Cxx                1             2           0
+BUILD: [00:0000000069:PROGC ] Assembler                0             0           0
+BUILD: [00:0000000070:PROGC ] Static Libraries         0             0           0
+BUILD: [00:0000000071:PROGC ] Dll's                    0             0           0
+BUILD: [00:0000000072:PROGC ] Exe's                    1             0           0
+BUILD: [00:0000000073:PROGC ] Resx                     0             0           0
+BUILD: [00:0000000074:PROGC ] Csharp Targets           0             0           0
+BUILD: [00:0000000075:PROGC ] Other                    0             0           0
+BUILD: [00:0000000076:PROGC ] 
+BUILD: [00:0000000077:PROGC ] Total                    4             2           0
+BUILD: [00:0000000078:PROGC ] 
+BUILD: [00:0000000079:PROGC ] 2 Warnings,  0 Errors

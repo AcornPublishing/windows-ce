@@ -1,0 +1,3 @@
+[HKEY_LOCAL_MACHINE\System\StorageManager\AutoLoad\MyFSD]
+    "Dll"="MyFSD.dll"
+    "Paging"=dword:0

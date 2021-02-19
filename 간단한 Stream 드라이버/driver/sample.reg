@@ -1,0 +1,4 @@
+[HKEY_LOCAL_MACHINE\Drivers\Builtin\SAMPLE]
+    "Dll"="SAMPLE.DLL"
+    "Prefix"="SAM"
+    "Index"=dword:1

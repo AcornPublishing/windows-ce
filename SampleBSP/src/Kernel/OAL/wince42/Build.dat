@@ -1,0 +1,10 @@
+V 403
+D \WINCE500\PLATFORM\SAMPLEBSP\src\Kernel\OAL\wince42\ 142005
+ F fw.s 42009 0 1C616F8E01B38FE
+  I kxarm.h 1 
+  I map.a 1 
+ F oal.c 42041 0 1C66E609D50D938
+  I pehdr.h 0 
+  I Romldr.h 0 
+ F obj\ 40000 10 0
+

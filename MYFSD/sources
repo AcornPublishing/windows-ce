@@ -1,0 +1,12 @@
+TARGETNAME=myfsd
+DLLENTRY=DllMain
+TARGETTYPE=DYNLINK
+DEFFILE=myfsd.def
+WINCEOEM=1 
+
+TARGETLIBS=$(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib \
+           $(_COMMONOAKROOT)\lib\$(_CPUINDPATH)\fsdmgr.lib
+
+
+SOURCES = \
+    myfsd.cpp 

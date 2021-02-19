@@ -1,0 +1,158 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [00:0000000000:PROGC ] Checking for \WINCE500\sdk\bin\i386\srccheck.exe.
+BUILD: [00:0000000001:PROGC ] SrcCheck exit code: 0 (dec).
+BUILD: [00:0000000002:PROGC ] Compile and Link for ARM.
+BUILD: [00:0000000003:PROGC ] Loading C:\WINCE500\PLATFORM\MYBSP\Build.dat.
+BUILD: [00:0000000004:PROGC ] Done.
+BUILD: [00:0000000005:PROGC ] Computing include file dependencies:
+BUILD: [00:0000000006:PROGC ] Checking for SDK include directory: C:\WINCE500\sdk\ce\inc.
+BUILD: [00:0000000007:PROGC ] Scan \WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT\
+BUILD: [00:0000000008:INFO  ] Will Compile \WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT\main.c because target: obj\ARMV4I\retail\main.obj is missing.
+BUILD: [00:0000000009:INFO  ] Will Compile \WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT\flash.c because target: obj\ARMV4I\retail\flash.obj is missing.
+BUILD: [00:0000000010:INFO  ] Will Compile \WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT\Start.s because target: obj\ARMV4I\retail\Start.obj is missing.
+BUILD: [00:0000000011:PROGC ] Compiling \WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT\ directory.
+BUILD: [00:0000000012:PROG  ] 'NMAKE.EXE   -i -c BUILDMSG=Stop.  NOLINK=1 NOPASS0=1'
+BUILD: [01:0000000013:INFO  ] makefile.def: BUILDROOT is C:\WINCE500\PLATFORM\MYBSP
+BUILD: [01:0000000014:INFO  ] makefile.def: Including C:\WINCE500\PLATFORM\MYBSP\sources.cmn
+BUILD: [01:0000000015:INFO  ] Haje - WINCETREE = samplemybspproject
+BUILD: [01:0000000016:INFO  ] Haje - COMMONPUBROOT = C:\WINCE500\PBWorkspaces\samplemybspproject\WINCE500\MYBSP_ARMV4I\cesysgen
+BUILD: [01:0000000017:INFO  ] Haje - WINCEPROJ = 
+BUILD: [01:0000000018:INFO  ] Haje - _PUBLICROOT = C:\WINCE500\public
+BUILD: [01:0000000019:INFO  ] Directory: C:\WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT
+BUILD: [01:0000000020:INFO  ] TARGETNAME: EBOOT
+BUILD: [01:0000000021:INFO  ] makefile.def: Including C:\WINCE500\public\common\oak\misc\sources.ReleaseType_PLATFORM
+BUILD: [01:0000000022:PROGC ] Compiling .\main.c
+BUILD: [01:0000000023:INFO  ] cl -nologo   /Gy -Foobj\ARMV4I\retail\main.obj -c -IARM\ -I. -IC:\WINCE500\public\common\sdk\inc -IC:\WINCE500\public\common\oak\inc -IC:\WINCE500\public\common\ddk\inc -IC:\WINCE500\sdk\CE\inc -I.\Resource\0409 -Ox -Os -GF -Zi -FdC:\WINCE500\platform\MYBSP\target\ARMV4I\retail\EBOOT.pdb -DUNICODE -D_UNICODE -DUNDER_CE=500 -D_WIN32_WCE=500 -DWINCEOEM -DWINCEINTERNAL -DWIN32 -DSTRICT -DARM -DARMV4I -D_ARM_   -DINTERNATIONAL -DL0409 -DINTLMSG_CODEPAGE=1252 -QRimplicit-import- -W3   -QRarch4T -DTHUMBSUPPORT -QRinterwork-return  C:\WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT\.\main.c
+BUILD: [01:0000000024:INFO  ] main.c
+BUILD: [01:0000000025:PROGC ] Compiling .\flash.c
+BUILD: [01:0000000026:INFO  ] cl -nologo   /Gy -Foobj\ARMV4I\retail\flash.obj -c -IARM\ -I. -IC:\WINCE500\public\common\sdk\inc -IC:\WINCE500\public\common\oak\inc -IC:\WINCE500\public\common\ddk\inc -IC:\WINCE500\sdk\CE\inc -I.\Resource\0409 -Ox -Os -GF -Zi -FdC:\WINCE500\platform\MYBSP\target\ARMV4I\retail\EBOOT.pdb -DUNICODE -D_UNICODE -DUNDER_CE=500 -D_WIN32_WCE=500 -DWINCEOEM -DWINCEINTERNAL -DWIN32 -DSTRICT -DARM -DARMV4I -D_ARM_   -DINTERNATIONAL -DL0409 -DINTLMSG_CODEPAGE=1252 -QRimplicit-import- -W3   -QRarch4T -DTHUMBSUPPORT -QRinterwork-return  C:\WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT\.\flash.c
+BUILD: [01:0000000027:INFO  ] flash.c
+BUILD: [01:0000000028:PROGC ] Assembling .\Start.s
+BUILD: [01:0000000029:INFO  ] 	armasm -coff  -cr  -i C:\WINCE500\public\common\sdk\inc,C:\WINCE500\public\common\oak\inc,C:\WINCE500\public\common\ddk\inc,C:\WINCE500\sdk\CE\inc -i arm -arch 4t -pd "Thumbing SETL {FALSE}" -pd "Interworking SETL {TRUE}"  C:\WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT\.\Start.s obj\ARMV4I\retail\Start.obj
+BUILD: [01:0000000030:INFO  ] ARM Macro Assembler, Version 13.10.4077
+BUILD: [01:0000000031:INFO  ] Copyright (C) Microsoft Corporation 1984-2004
+BUILD: [01:0000000032:INFO  ] 	romimage  boot.bib
+BUILD: [01:0000000033:INFO  ] 
+BUILD: [01:0000000034:INFO  ] Windows CE ROM Image Builder v4.0.000 Copyright (c) Microsoft Corporation
+BUILD: [01:0000000035:INFO  ] Built: Jun 16 2004 15:09:27
+BUILD: [01:0000000036:INFO  ] 
+BUILD: [01:0000000037:INFO  ] Error: Could not find file 'C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\eboot.exe' on disk
+BUILD: [01:0000000038:INFO  ] nk.exe C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\eboot.exe EBOOT 
+BUILD: [01:0000000039:INFO  ] 
+BUILD: [01:0000000040:INFO  ] Error: failed setting line
+BUILD: [01:0000000041:INFO  ] Stop.
+BUILD: [00:0000000042:INFO  ] Relinking \WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT\ because target lib: C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\EBOOT.exe does not exist.
+BUILD: [00:0000000043:PROGC ] Linking \WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT\ directory.
+BUILD: [00:0000000044:PROG  ] 'NMAKE.EXE   -i -c BUILDMSG=Stop.  LINKONLY=1 NOPASS0=1'
+BUILD: [01:0000000045:INFO  ] makefile.def: BUILDROOT is C:\WINCE500\PLATFORM\MYBSP
+BUILD: [01:0000000046:INFO  ] makefile.def: Including C:\WINCE500\PLATFORM\MYBSP\sources.cmn
+BUILD: [01:0000000047:INFO  ] Haje - WINCETREE = samplemybspproject
+BUILD: [01:0000000048:INFO  ] Haje - COMMONPUBROOT = C:\WINCE500\PBWorkspaces\samplemybspproject\WINCE500\MYBSP_ARMV4I\cesysgen
+BUILD: [01:0000000049:INFO  ] Haje - WINCEPROJ = 
+BUILD: [01:0000000050:INFO  ] Haje - _PUBLICROOT = C:\WINCE500\public
+BUILD: [01:0000000051:INFO  ] Directory: C:\WINCE500\PLATFORM\MYBSP\src\Bootloader\EBOOT
+BUILD: [01:0000000052:INFO  ] TARGETNAME: EBOOT
+BUILD: [01:0000000053:INFO  ] makefile.def: Including C:\WINCE500\public\common\oak\misc\sources.ReleaseType_PLATFORM
+BUILD: [01:0000000054:INFO  ] 	set LIB=C:\WINCE500\sdk\CE\lib
+BUILD: [01:0000000055:PROGC ] Linking C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\EBOOT.exe
+BUILD: [01:0000000056:INFO  ] 	link /LARGEADDRESSAWARE -out:C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\EBOOT.exe -machine:thumb @C:\DOCUME~1\LEEBS2~1\LOCALS~1\Temp\nm560.tmp
+BUILD: [01:0000000057:INFO  ] Microsoft (R) Incremental Linker Version 7.10.4017
+BUILD: [01:0000000058:INFO  ] Copyright (C) Microsoft Corporation.  All rights reserved.
+BUILD: [01:0000000059:INFO  ] 
+BUILD: [01:0000000060:INFO  ] -nodefaultlib 
+BUILD: [01:0000000061:INFO  ] -entry:StartUp 
+BUILD: [01:0000000062:INFO  ] -pdb:C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\EBOOT.pdb 
+BUILD: [01:0000000063:INFO  ] /opt:ref 
+BUILD: [01:0000000064:INFO  ] -debug -debugtype:cv -incremental:no 
+BUILD: [01:0000000065:INFO  ] -map:C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\EBOOT.map 
+BUILD: [01:0000000066:INFO  ] -savebaserelocations:C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\EBOOT.rel 
+BUILD: [01:0000000067:INFO  ] -MERGE:.rdata=.text -merge:.astart=.text -align:4096 -ignore:4001,4070,4078,4086,4089,4096,4099,4108,4229 /STACK:65536,4096 
+BUILD: [01:0000000068:INFO  ] -subsystem:windowsce,5.00 
+BUILD: [01:0000000069:INFO  ] -base:0x00010000 
+BUILD: [01:0000000070:INFO  ] obj\ARMV4I\retail\main.obj obj\ARMV4I\retail\flash.obj obj\ARMV4I\retail\Start.obj 
+BUILD: [01:0000000071:INFO  ] C:\WINCE500\PBWorkspaces\samplemybspproject\WINCE500\MYBSP_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\blcommon.lib C:\WINCE500\PBWorkspaces\samplemybspproject\WINCE500\MYBSP_ARMV4I\cesysgen\oak\lib\ARMV4I\retail\fulllibc.lib C:\WINCE500\PBWorkspaces\samplemybspproject\WINCE500\MYBSP_ARMV4I\cesysgen\sdk\lib\ARMV4I\retail\corelibc.lib 
+BUILD: [01:0000000072:INFO  ] 	romimage  boot.bib
+BUILD: [01:0000000073:INFO  ] 
+BUILD: [01:0000000074:INFO  ] Windows CE ROM Image Builder v4.0.000 Copyright (c) Microsoft Corporation
+BUILD: [01:0000000075:INFO  ] Built: Jun 16 2004 15:09:27
+BUILD: [01:0000000076:INFO  ] 
+BUILD: [01:0000000077:INFO  ] Copying C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\eboot.exe to C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\nk.exe for debugger
+BUILD: [01:0000000078:INFO  ] Error: Module nk.exe relocations stripped, remove -fixed from link command
+BUILD: [01:0000000079:INFO  ] Found pTOC at 00001030
+BUILD: [01:0000000080:INFO  ] Warning: No fixup information for NK.  NK linkr command /FIXED:NO may be required
+BUILD: [01:0000000081:INFO  ] No imports for nk.exe
+BUILD: [01:0000000082:INFO  ] Processing EBOOT
+BUILD: [01:0000000083:INFO  ] 
+BUILD: [01:0000000084:INFO  ] MODULES Section
+BUILD: [01:0000000085:INFO  ] Module                 Section  Start     Length  psize   vsize   Filler
+BUILD: [01:0000000086:INFO  ] ---------------------- -------- --------- ------- ------- ------- ------
+BUILD: [01:0000000087:INFO  ] nk.exe                 .text    a0031000   12288    8704    8704 o32_rva=00001000
+BUILD: [01:0000000088:INFO  ] nk.exe                 .pdata   a0034000    4096     512     208 o32_rva=00006000
+BUILD: [01:0000000089:INFO  ] nk.exe                 .data    a0033200       1       1    6752 FILLER->a0050000
+BUILD: [01:0000000090:INFO  ] nk.exe                 E32      a0033204     112                 FILLER
+BUILD: [01:0000000091:INFO  ] nk.exe                 O32      a0033274      72                 FILLER
+BUILD: [01:0000000092:INFO  ] 
+BUILD: [01:0000000093:INFO  ] MODULES Section
+BUILD: [01:0000000094:INFO  ] Module                 Section  Start     Length  psize   vsize   Filler
+BUILD: [01:0000000095:INFO  ] ---------------------- -------- --------- ------- ------- ------- ------
+BUILD: [01:0000000096:INFO  ] nk.exe                 FileName a00332bc        7                 FILLER
+BUILD: [01:0000000097:INFO  ] 
+BUILD: [01:0000000098:INFO  ] Unfilled ROM holes (address, length):
+BUILD: [01:0000000099:INFO  ] a00340d0     3888   a00332c4     3388   
+BUILD: [01:0000000100:INFO  ] total space 7276 in 2 ranges
+BUILD: [01:0000000101:INFO  ] 
+BUILD: [01:0000000102:INFO  ] Writing C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\EBOOT.bin
+BUILD: [01:0000000103:INFO  ] Table of contents  a0033318  00000020  (        32)
+BUILD: [01:0000000104:INFO  ] Writing ROM signature and TOC pointer at a0030040
+BUILD: [01:0000000105:INFO  ] Kernel data copy section  a0033338  00000010  (        16)
+BUILD: [01:0000000106:INFO  ] ROM Header                a00332c4  00000054  (        84)
+BUILD: [01:0000000107:INFO  ] 
+BUILD: [01:0000000108:INFO  ] First DLL code Address:  04000000
+BUILD: [01:0000000109:INFO  ] Last DLL code Address:   04000000
+BUILD: [01:0000000110:INFO  ] First DLL Address:       02000000
+BUILD: [01:0000000111:INFO  ] Last DLL Address:        02000000
+BUILD: [01:0000000112:INFO  ] Physical Start Address:  a0030000
+BUILD: [01:0000000113:INFO  ] Physical End Address:    a00340d0
+BUILD: [01:0000000114:INFO  ] Start RAM:               a0050000
+BUILD: [01:0000000115:INFO  ] Start of free RAM:       a0052000
+BUILD: [01:0000000116:INFO  ] End of RAM:              a0060000
+BUILD: [01:0000000117:INFO  ] Number of Modules:       1
+BUILD: [01:0000000118:INFO  ] Number of Copy Sections: 1
+BUILD: [01:0000000119:INFO  ] Copy Section Offset:     a0033338
+BUILD: [01:0000000120:INFO  ] FileSys 4K Chunks/Mbyte: 128 <2Mbyte  128 2-4Mbyte  0 4-6Mbyte  0 >6Mbyte
+BUILD: [01:0000000121:INFO  ] CPU Type:                    01c2h
+BUILD: [01:0000000122:INFO  ] Miscellaneous Flags:         0002h
+BUILD: [01:0000000123:INFO  ] Total ROM size:          000040d0 (     16592)
+BUILD: [01:0000000124:INFO  ] Starting ip:             a0031000
+BUILD: [01:0000000125:INFO  ] Raw files size:          00000000
+BUILD: [01:0000000126:INFO  ] Compressed files size:   00000000
+BUILD: [01:0000000127:INFO  ] Compacting bin file...
+BUILD: [01:0000000128:INFO  ] Writing rom file...
+BUILD: [01:0000000129:INFO  ] Start a0030000 Len 00000004
+BUILD: [01:0000000130:INFO  ] Start a0030040 Len 00000008
+BUILD: [01:0000000131:INFO  ] Start a0030048 Len 00000004
+BUILD: [01:0000000132:INFO  ] Start a0031000 Len 000022c4
+BUILD: [01:0000000133:INFO  ] Start a00332c4 Len 00000054
+BUILD: [01:0000000134:INFO  ] Start a0033318 Len 00000030
+BUILD: [01:0000000135:INFO  ] Start a0034000 Len 000000d0
+BUILD: [01:0000000136:INFO  ] Creating rom file C:\WINCE500\platform\MYBSP\target\ARMV4I\retail\EBOOT.nb0
+BUILD: [01:0000000137:INFO  ] Done!
+BUILD: [01:0000000138:INFO  ] Stop.
+BUILD: [00:0000000139:PROGC ] Done.
+BUILD: [00:0000000140:PROGC ]                      Files      Warnings      Errors
+BUILD: [00:0000000141:PROGC ] Midl                     0             0           0
+BUILD: [00:0000000142:PROGC ] Resource                 0             0           0
+BUILD: [00:0000000143:PROGC ] Message                  0             0           0
+BUILD: [00:0000000144:PROGC ] Precomp Header           0             0           0
+BUILD: [00:0000000145:PROGC ] C/Cpp/Cxx                2             0           0
+BUILD: [00:0000000146:PROGC ] Assembler                1             0           0
+BUILD: [00:0000000147:PROGC ] Static Libraries         0             0           0
+BUILD: [00:0000000148:PROGC ] Dll's                    0             0           0
+BUILD: [00:0000000149:PROGC ] Exe's                    1             0           0
+BUILD: [00:0000000150:PROGC ] Resx                     0             0           0
+BUILD: [00:0000000151:PROGC ] Csharp Targets           0             0           0
+BUILD: [00:0000000152:PROGC ] Other                    0             0           0
+BUILD: [00:0000000153:PROGC ] 
+BUILD: [00:0000000154:PROGC ] Total                    4             0           0
+BUILD: [00:0000000155:PROGC ] 
+BUILD: [00:0000000156:PROGC ] 0 Warnings,  0 Errors

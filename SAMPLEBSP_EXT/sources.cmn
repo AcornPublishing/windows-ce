@@ -1,0 +1,14 @@
+WINCEOEM=1
+IMGNODFLTDDK=1
+WARNISERROR=1
+
+_COMMONPUBROOT=$(_PUBLICROOT)\common
+_PLATCOMMONLIB=$(_PLATFORMROOT)\common\lib
+
+_OEMINCPATH=$(_WINCEROOT)\public\common\sdk\inc
+_OEMINCPATH=$(_OEMINCPATH);$(_WINCEROOT)\public\common\oak\inc
+_OEMINCPATH=$(_OEMINCPATH);$(_WINCEROOT)\public\common\ddk\inc
+
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc
+
+INCLUDES=$(_TARGETPLATROOT)\src\inc;$(_PLATFORMROOT)\common\src\inc
